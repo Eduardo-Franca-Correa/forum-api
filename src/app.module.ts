@@ -3,6 +3,7 @@ import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { DatabaseModule } from './database/database.module';
 
+// npm run start:dev
 @Module({
   imports: [AuthModule, UserModule, DatabaseModule],
 })
