@@ -10,11 +10,11 @@ export class AnswersService {
   private readonly prisma: PrismaService;
 
 
-  async create(createAnswerDto: CreateAnswerDto, userId: number, questionId: number) {
+  async create(createAnswerDto: CreateAnswerDto, userId: any, questionId: number) {
     const newAnswer = {
       body: createAnswerDto.body,
       user: {
-        connect: { id: userId},
+        connect: { id: userId.sub},
       },
       question: {
         connect: { id: questionId },
