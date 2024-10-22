@@ -1,4 +1,13 @@
+import { IsString, IsNotEmpty, Length } from 'class-validator';
+
 export class CreateQuestionDto {
-    title:  string
-    body:   string
+  @Length(6)
+  @IsString()
+  @IsNotEmpty()
+  title: string;
+
+  @Length(6)
+  @IsString()
+  @IsNotEmpty()
+  body: string;
 }
